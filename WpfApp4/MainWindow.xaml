@@ -1,0 +1,114 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="128*"/>
+            <ColumnDefinition Width="501*"/>
+            <ColumnDefinition Width="271*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="156*"/>
+        </Grid.RowDefinitions>
+
+        <!--Лого-->
+        <Grid Grid.ColumnSpan="3">
+            <StackPanel>
+                <Canvas>
+                    <Rectangle Fill="LightGreen" Width="900" HorizontalAlignment="Left" Height="57" VerticalAlignment="Center"/>
+                    <Ellipse Fill="Green" Width="80" HorizontalAlignment="Center" Height="57" VerticalAlignment="Top"/>
+                    <Label Content="Логотип" Canvas.Left="12" Canvas.Top="16"/>
+                    <Rectangle Fill="White" Width="606" HorizontalAlignment="Center" Height="26" VerticalAlignment="Center" Canvas.Left="135" RadiusX="13.489" RadiusY="13.489" Canvas.Top="16"/>
+                    <Ellipse Fill="Green" Width="80" HorizontalAlignment="Left" Height="57" VerticalAlignment="Center" Canvas.Left="810"/>
+                    <Label Content="Фото" Canvas.Left="831" Canvas.Top="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                </Canvas>
+            </StackPanel>
+        </Grid>
+
+        <!--Окно поиска-->
+        <Grid Grid.Row="1" Grid.Column="3">
+            <StackPanel>
+                <Canvas>
+                    <TextBox Text="Окно поиска" Canvas.Left="6" Canvas.Top="6" HorizontalAlignment="Left" VerticalAlignment="Center" Width="262"/>
+                </Canvas>
+            </StackPanel>
+        </Grid>
+
+        <!--Меню-->
+        <Grid Grid.Row="2" Grid.RowSpan="2">
+            <StackPanel>
+                <Canvas>
+                    <Rectangle Fill="LightGreen" Width="108" HorizontalAlignment="Left" Height="450" VerticalAlignment="Center" Canvas.Left="10"/>
+                    <Label Content="Меню" Canvas.Left="42" Canvas.Top="125"/>
+
+                </Canvas>
+            </StackPanel>
+        </Grid>
+
+        <!--Середина-->
+        <Grid Grid.Row="2" Grid.Column="1">
+            <StackPanel>
+                <Canvas>
+                    <Rectangle Fill="LightGreen" Width="501" HorizontalAlignment="Center" Height="131" VerticalAlignment="Top"/>
+                    <Button Content="Оповещение 1" Background="Green" Foreground="White" Canvas.Left="14" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="35"/>
+                    <Button Content="Оповещение 2" Background="Green" Foreground="White" Canvas.Left="176" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="35"/>
+                    <Button Content="Оповещение 3" Background="Green" Foreground="White" Canvas.Left="339" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="35"/>
+
+                    <Button Content="Событие 1" Background="Green" Foreground="White" Canvas.Left="14" Canvas.Top="80" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="35"/>
+                    <Button Content="Событие 2" Background="Green" Foreground="White" Canvas.Left="176" Canvas.Top="80" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="35"/>
+                    <Button Content="Событие 3" Background="Green" Foreground="White" Canvas.Left="339" Canvas.Top="80" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="35"/>
+
+                </Canvas>
+            </StackPanel>
+        </Grid>
+
+        <!--Правая часть-->
+        <Grid Grid.Row="2" Grid.Column="3">
+            <StackPanel>
+                <Canvas>
+                    <Rectangle Fill="LightGreen" Width="251" HorizontalAlignment="Left" Height="137" VerticalAlignment="Center" Canvas.Left="10"/>
+                    <Button Content="Новость 1" Background="Green" Foreground="White" Canvas.Left="60" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="35"/>
+                    <Button Content="Новость 2" Background="Green" Foreground="White" Canvas.Left="60" Canvas.Top="50" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" Height="35"/>
+
+                    <Button Content="Новость 3" Background="Green" Foreground="White" Canvas.Left="60" Canvas.Top="91" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" Height="35"/>
+
+
+
+                </Canvas>
+            </StackPanel>
+        </Grid>
+
+        <!--Нижняя часть-->
+        <Grid Grid.Row="3" Grid.Column="1">
+            <StackPanel>
+                <DataGrid Height="312" AutoGenerateColumns="False" x:Name="dateGrid">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"/>
+                        <DataGridTextColumn Header="Отчество" Binding="{Binding MiddleName}"/>
+                        <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"/>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Grid>
+
+        <!--Нижняя правая часть-->
+        <Grid Grid.Row="3" Grid.Column="3">
+            <StackPanel>
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
